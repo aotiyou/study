@@ -1,0 +1,17 @@
+
+W
+java:S1854":Remove this useless assignment to local variable "srcStr".(£ì •8¥‡Ë˜è1
+H
+java:S1481"+Remove this unused "srcStr" local variable.(£ì •8¦‡Ë˜è1
+L	java:S106"+Replace this use of System.out by a logger.(åö¡½úÿÿÿÿ8¦‡Ë˜è1
+G	java:S106#"+Replace this use of System.out by a logger.(´ëÔÁ8§‡Ë˜è1
+G	java:S106'"+Replace this use of System.out by a logger.(Û¸Ÿ”8§‡Ë˜è1
+L	java:S106/"+Replace this use of System.out by a logger.(øÎüØøÿÿÿÿ8§‡Ë˜è1
+b
+java:S1854G"@Remove this useless assignment to local variable "logTypeArray".(˜•ã€ûÿÿÿÿ8§‡Ë˜è1
+X	java:S125A"<This block of commented-out lines of code should be removed.(¢ÓØ8¨‡Ë˜è1
+S
+java:S1481G"1Remove this unused "logTypeArray" local variable.(˜•ã€ûÿÿÿÿ8¨‡Ë˜è1
+G	java:S106S"+Replace this use of System.out by a logger.(Ã®û›8¨‡Ë˜è1
+G	java:S106W"+Replace this use of System.out by a logger.(ìŒÚ˜8¨‡Ë˜è1
+L	java:S106["+Replace this use of System.out by a logger.(ýÜ”¢ýÿÿÿÿ8›âË˜è1

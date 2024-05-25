@@ -1,0 +1,8 @@
+
+}
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "msg".(à‘±’üÿÿÿÿ8àöƒ¬ç1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8îöƒ¬ç1
+G	java:S106"+Replace this use of System.out by a logger.(û‡ë½8÷öƒ¬ç1
+X	java:S125"<This block of commented-out lines of code should be removed.(¸Ï¾ÿ8øöƒ¬ç1
+L	java:S106 "+Replace this use of System.out by a logger.(ºÕçÎÿÿÿÿÿ8øöƒ¬ç1

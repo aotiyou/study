@@ -1,0 +1,22 @@
+
+£
+java:S1186j"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ÏøÍüÿÿÿÿ8®İ™×æ1
+˜
+java:S1130"{Remove the declaration of thrown exception 'java.net.UnknownHostException', as it cannot be thrown from constructor's body.(“¨ÓÓ8—µƒ×æ1
+G	java:S106 "+Replace this use of System.out by a logger.(ÆÀûı8Üí×æ1
+G	java:S106("+Replace this use of System.out by a logger.(«Ä”Ñ8İí×æ1
+^
+java:S10750"ARefactor your code to get this URI from a customizable parameter.(¿õÍñ8à‘Ğç1
+^
+java:S10752"ARefactor your code to get this URI from a customizable parameter.(Æ»‘8á‘Ğç1
+L	java:S106A"+Replace this use of System.out by a logger.(ÇêÈüûÿÿÿÿ8ğ‘„×æ1
+X	java:S125G"<This block of commented-out lines of code should be removed.(ÖÀ»µ8“À³×æ1
+G	java:S106U"+Replace this use of System.out by a logger.(²áø›8Ğ‹²×æ1
+L	java:S106d"+Replace this use of System.out by a logger.(ïëèÖıÿÿÿÿ8ıíÆç1
+
+java:S1130j"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(‹ÏøÍüÿÿÿÿ8¸İ™×æ1
+Q
+java:S1172j"/Remove this unused method parameter "filename".(‹ÏøÍüÿÿÿÿ8Ñ°˜×æ1
+G	java:S106t"+Replace this use of System.out by a logger.(ú‹Ï‹8ä‘Ğç1
+O
+java:S1144j"-Remove this unused private "sendFile" method.(‹ÏøÍüÿÿÿÿ8„„—×æ1

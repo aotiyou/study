@@ -1,0 +1,26 @@
+
+x
+java:S1192"[Define a constant instead of duplicating this literal "A Message From LOGGERï¼š{}" 5 times.(ÛıÇò8Õ««±å1
+]
+java:S1854";Remove this useless assignment to local variable "context".(î¼Ûùÿÿÿÿ8¨Éşˆ÷1
+N
+java:S1481",Remove this unused "context" local variable.(î¼Ûùÿÿÿÿ8©Éşˆ÷1
+X	java:S125"<This block of commented-out lines of code should be removed.(î¯ÔÉ8„œü¼ì1
+]	java:S125"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8…œü¼ì1
+]	java:S125""<This block of commented-out lines of code should be removed.(ó¥Æøÿÿÿÿ8ÙÌ¿±å1
+m
+java:S1128"PRemove this unused import 'ch.qos.logback.classic.encoder.PatternLayoutEncoder'.( Á°€8ÙÌ¿±å1
+g
+java:S1128"ERemove this unused import 'ch.qos.logback.classic.spi.ILoggingEvent'.(È´ù¥şÿÿÿÿ8ÙÌ¿±å1
+s
+java:S1128"QRemove this unused import 'ch.qos.logback.core.rolling.FixedWindowRollingPolicy'.(ìÒÖ¢úÿÿÿÿ8ÙÌ¿±å1
+n
+java:S1128"LRemove this unused import 'ch.qos.logback.core.rolling.RollingFileAppender'.(š‘Æÿÿÿÿÿ8ÙÌ¿±å1
+o
+java:S1128"RRemove this unused import 'ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy'.( ¬Ğ8ÙÌ¿±å1
+`
+java:S1128	">Remove this unused import 'ch.qos.logback.core.util.FileSize'.(§Ù›Êøÿÿÿÿ8ÙÌ¿±å1
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8ÚÌ¿±å1
+[
+java:S1128">Remove this unused import 'java.nio.charset.StandardCharsets'.(ï˜ŞÛ8ÚÌ¿±å1

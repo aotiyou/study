@@ -1,0 +1,12 @@
+
+g	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(¡ÆÞ„øÿÿÿÿ8°€¶ÿù1
+g	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°€¶ÿù1
+b	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(¦žÙÈ8°€¶ÿù1
+a	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(–˜ö8°€¶ÿù1
+g	java:S112K"FDefine and throw a dedicated exception instead of using a generic one.(å˜Ø‡þÿÿÿÿ8°€¶ÿù1
+g	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(äÀõœÿÿÿÿÿ8°€¶ÿù1
+S
+java:S6437"6Revoke and change this password, as it is compromised.(Ï—ùé8¶€¶ÿù1
+L	java:S106'"+Replace this use of System.out by a logger.(–ê™Öýÿÿÿÿ8’É·ÿù1
+L	java:S106+"+Replace this use of System.out by a logger.(ÂÝß›ýÿÿÿÿ8«‰¸ÿù1
+G	java:S106/"+Replace this use of System.out by a logger.(ÁÀ²ß8«‰¸ÿù1

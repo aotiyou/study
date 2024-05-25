@@ -1,0 +1,11 @@
+
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İü²ó8ãÙßÎé1
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(‹­°ùÿÿÿÿ8äÙßÎé1
+N
+java:S1481",Remove this unused "srcHash" local variable.(ôùúòûÿÿÿÿ8åÙßÎé1
+I
+java:S1481",Remove this unused "checked" local variable.(˜äÕğ8åÙßÎé1
+G	java:S106"+Replace this use of System.out by a logger.(Ğ æ¨8åÙßÎé1
+L	java:S106"+Replace this use of System.out by a logger.(ÿòÁñøÿÿÿÿ8åÙßÎé1

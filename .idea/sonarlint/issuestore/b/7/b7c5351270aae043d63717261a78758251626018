@@ -1,0 +1,31 @@
+
+a	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(‘Â¾C8Èóãıù1
+g	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(†ÄŠ²ÿÿÿÿÿ8Èóãıù1
+b	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(¿ì¶8Èóãıù1
+r
+java:S1104/"UMake publicKey a static final constant or non-public and provide accessors if needed.(·ó«ø8Èóãıù1
+G	java:S106#"+Replace this use of System.out by a logger.(¢ÑÈ¶8Îóãıù1
+L	java:S106%"+Replace this use of System.out by a logger.(§“Âûÿÿÿÿ8Îóãıù1
+G	java:S106("+Replace this use of System.out by a logger.(Õ·ÛÖ8Îóãıù1
+G	java:S106*"+Replace this use of System.out by a logger.(ÛƒÀ8æÑæıù1
+b
+java:S44267"@Use a key length of at least 2048 bits for RSA cipher algorithm.(¨°ïëøÿÿÿÿ8æÑæıù1
+>
+java:S5542I"Use a secure padding scheme.(»¦µªúÿÿÿÿ8çÑæıù1
+>
+java:S5542P"Use a secure padding scheme.(»¦µªúÿÿÿÿ8èÑæıù1
+h
+java:S1128"FRemove this unused import 'org.bouncycastle.util.encoders.HexEncoder'.(Ñ…š¦ùÿÿÿÿ8Ìåıù1
+S
+java:S1128"6Remove this unused import 'javax.crypto.KeyAgreement'.(ˆ ˜‰8Ğóãıù1
+b
+java:S1128"@Remove this unused import 'javax.crypto.NoSuchPaddingException'.(âÆ×øÿÿÿÿÿ8Ğóãıù1
+Q
+java:S1128
+"5Remove this unused import 'java.security.KeyFactory'.(èÙ†D8Ğóãıù1
+e
+java:S1128"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾şÿÿÿÿ8Ğóãıù1
+d
+java:S1128"BRemove this unused import 'java.security.spec.X509EncodedKeySpec'.(¢ŸÇ¨úÿÿÿÿ8Ğóãıù1
+O
+java:S10681"-Remove this unused "secretKey" private field.(ÉÏ¢ªıÿÿÿÿ8èÑæıù1

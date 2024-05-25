@@ -1,0 +1,14 @@
+
+g	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ñ€¯ïüÿÿÿÿ8´Ñªûù1
+g	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(¢ÒªÒûÿÿÿÿ8Íõ­ûù1
+
+java:S11920"_Define a constant instead of duplicating this literal "PBEwithSHA1and128bitAES-CBC-BC" 4 times.(ìı• şÿÿÿÿ8‰½­ûù1
+L	java:S106""+Replace this use of System.out by a logger.( °É¢üÿÿÿÿ8ºÑªûù1
+L	java:S106&"+Replace this use of System.out by a logger.(ùİéûÿÿÿÿ8»Ñªûù1
+G	java:S106*"+Replace this use of System.out by a logger.(Ã¡âå8Õ©´ûù1
+9
+java:S55423"Use a secure padding scheme.(Ìå 8¼Ñªûù1
+9
+java:S5542="Use a secure padding scheme.(Ìå 8½­ûù1
+e
+java:S1128"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾şÿÿÿÿ8–°ûù1
