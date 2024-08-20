@@ -14,6 +14,8 @@ import java.security.SecureRandom;
 import java.util.Base64;
 
 /**
+ * 对称加密算法
+ *
  * @author infosec
  * @since 2024/5/22
  */
@@ -59,6 +61,10 @@ public class AesMain {
 
     /**
      * ECB加密
+     *
+     * ECB模式是最简单的AES加密模式，它只需要一个固定长度的密钥，固定的明文会生成固定的密文，这种一对一的加密方式会导致安全性降低，
+     * 更好的方式是通过CBC模式，它需要一个随机数作为IV参数，这样对于同一份明文，每次生成的密文都不同
+     *
      * @author infosec
      * @since  2024/5/22
      * @param key

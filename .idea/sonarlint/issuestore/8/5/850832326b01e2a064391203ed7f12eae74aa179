@@ -1,3 +1,8 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(æª¶àıÿÿÿÿ8ı¿Š÷ù1
-L	java:S106"+Replace this use of System.out by a logger.(×»–¨üÿÿÿÿ8ı¿Š÷ù1
+b	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(€½ä€8œÈÌö–2
+g	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(öåİóÿÿÿÿÿ8œÈÌö–2
+j
+java:S1192""HDefine a constant instead of duplicating this literal "HmacMD5" 4 times.(òóøÿÿÿÿ8œÈÌö–2
+L	java:S106&"+Replace this use of System.out by a logger.(æª¶àıÿÿÿÿ8¢ÈÌö–2
+L	java:S106/"+Replace this use of System.out by a logger.(×»–¨üÿÿÿÿ8¢ÈÌö–2
+L	java:S106C"+Replace this use of System.out by a logger.(×»–¨üÿÿÿÿ8ºˆÍö–2

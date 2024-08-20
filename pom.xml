@@ -16,6 +16,8 @@
         <module>thread</module>
         <module>file</module>
         <module>crypto</module>
+        <module>threeFeatures</module>
+        <module>design</module>
     </modules>
 
     <parent>
