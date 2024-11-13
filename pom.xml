@@ -18,6 +18,7 @@
         <module>crypto</module>
         <module>threeFeatures</module>
         <module>design</module>
+        <module>base</module>
     </modules>
 
     <parent>

@@ -3,8 +3,8 @@
     <Property name="logDir" value="./logs"/>
 
     <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
-        <syslogHost>10.4.150.204</syslogHost>
-        <facility>LOCAL0</facility>
+        <syslogHost>10.4.150.205</syslogHost>
+        <facility>LOCAL1</facility>
         <suffixPattern>%msg</suffixPattern>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>error</level>
@@ -80,7 +80,7 @@
     <!--    </logger>-->
 
     <root level="warn">
-        <!--        <appender-ref ref="RFILE"/>-->
+<!--                <appender-ref ref="RFILE"/>-->
 <!--        <appender-ref ref="RollingFileError" />-->
 <!--        <appender-ref ref="RollingFileInfo" />-->
         <appender-ref ref="SYSLOG" />

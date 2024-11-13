@@ -16,6 +16,9 @@ import java.util.Base64;
 import java.util.HexFormat;
 
 /**
+ * PBE算法：采用随机数杂凑计算出真正的密钥，再进行加密
+ * PBE的作用就是把用户输入的口令和一个安全随机的口令采用杂凑后计算出真正的密钥
+ *
  * @author infosec
  * @since 2024/5/22
  */
