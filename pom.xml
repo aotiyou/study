@@ -19,6 +19,7 @@
         <module>threeFeatures</module>
         <module>design</module>
         <module>base</module>
+        <module>io</module>
     </modules>
 
     <parent>
