@@ -6,6 +6,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
@@ -18,11 +19,11 @@ import java.io.IOException;
  */
 @Slf4j
 @RestController
-public class ImageController {
+public class VsmImageController {
 
-    @GetMapping("/image")
-    public ResponseEntity<InputStreamResource> downloadImage() {
-        String localFilePath = "D:/opt/infosec/CCypher/openapi/VSM-All-container-C249B20016000n0-1731495312229-93d354c0-371e-4ff1-aa72-ef73802d9e50.tar.gz";
+    @GetMapping("/image/{filename}")
+    public ResponseEntity<InputStreamResource> downloadImage(@PathVariable String filename) {
+        String localFilePath = "D:/opt/infosec/CCypher/openapi/" + filename;
         File localFile = new File(localFilePath);
 
         if (!localFile.exists()) {

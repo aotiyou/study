@@ -7,6 +7,7 @@ import ch.qos.logback.core.rolling.FixedWindowRollingPolicy;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy;
 import ch.qos.logback.core.util.FileSize;
+import cn.com.infosec.ucypher.logger.AgentLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +17,7 @@ import java.nio.charset.StandardCharsets;
 public class Main {
 
     private static final Logger LOG = LoggerFactory.getLogger(Main.class);
+   private static AgentLogger logger= AgentLogger.getLogger(Main.class);
 
     public static void main(String[] args) {
 
@@ -28,6 +30,9 @@ public class Main {
             LOG.warn("A Message From LOGGER：{}", "Hello WARN");
             LOG.error("A Message From LOGGER：{}", "Hello ERROR");
 //        }
+        logger.info("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        logger.info("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        logger.info("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
     }
 

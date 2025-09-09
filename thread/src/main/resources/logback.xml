@@ -1,0 +1,20 @@
+<configuration>
+
+    <Property name="logDir" value="./logs"/>
+
+    <property name="CONSOLE_LOG_PATTERN" value="%d [%thread] %-5level %logger{120} [%file : %line] - %msg%n"/>
+
+    <!--ConsoleAppender 用于在屏幕上输出日志-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <!-- 设置字符集 -->
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>

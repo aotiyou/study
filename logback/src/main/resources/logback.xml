@@ -2,38 +2,94 @@
 
     <Property name="logDir" value="./logs"/>
 
-    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
-        <syslogHost>10.4.150.205</syslogHost>
-        <facility>LOCAL1</facility>
-        <suffixPattern>%msg</suffixPattern>
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>error</level>
-        </filter>
+    <property name="CONSOLE_LOG_PATTERN" value="%d [%thread] %-5level %logger{120} [%file : %line] - %msg%n"/>
+
+    <!--ConsoleAppender 用于在屏幕上输出日志-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <!-- 设置字符集 -->
+            <charset>UTF-8</charset>
+        </encoder>
     </appender>
 
+<!--    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">-->
+<!--        <syslogHost>10.4.150.205</syslogHost>-->
+<!--        <facility>LOCAL1</facility>-->
+<!--        <suffixPattern>%msg</suffixPattern>-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>error</level>-->
+<!--        </filter>-->
+<!--    </appender>-->
+
     <!--appender03 根据大小和时间策略的滚动日志输出，Error及以上级别输出 -->
-    <appender name="RollingFileError" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>info</level>
-        </filter>
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <!--日志文件输出的文件名，日期必须加，如果单天需要生成多个日志，则需要添加%i-->
-            <FileNamePattern>${logDir}/error.%d{yyyy-MM-dd}-%i.log</FileNamePattern>
-            <!--历史日志文件保留天数，不包含当日日志，且需结合cleanHistoryOnStart字段使用-->
-            <!--可以按“文件数量、小时、天、月、年”等策略实现文件保留 -->
-            <MaxHistory>3</MaxHistory>
-            <cleanHistoryOnStart>true</cleanHistoryOnStart>
-            <!-- 单天单个日志最大size -->
-            <maxFileSize>1MB</maxFileSize>
-            <!--仅针对当天的日志进行总size控制,日志名中的“i”保留最后数值 -->
-            <totalSizeCap>10MB</totalSizeCap>
+<!--    <appender name="RollingFileError" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>info</level>-->
+<!--        </filter>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+<!--            &lt;!&ndash;日志文件输出的文件名，日期必须加，如果单天需要生成多个日志，则需要添加%i&ndash;&gt;-->
+<!--            <FileNamePattern>${logDir}/error.%d{yyyy-MM-dd}-%i.log</FileNamePattern>-->
+<!--            &lt;!&ndash;历史日志文件保留天数，不包含当日日志，且需结合cleanHistoryOnStart字段使用&ndash;&gt;-->
+<!--            &lt;!&ndash;可以按“文件数量、小时、天、月、年”等策略实现文件保留 &ndash;&gt;-->
+<!--            <MaxHistory>3</MaxHistory>-->
+<!--            <cleanHistoryOnStart>true</cleanHistoryOnStart>-->
+<!--            &lt;!&ndash; 单天单个日志最大size &ndash;&gt;-->
+<!--            <maxFileSize>1MB</maxFileSize>-->
+<!--            &lt;!&ndash;仅针对当天的日志进行总size控制,日志名中的“i”保留最后数值 &ndash;&gt;-->
+<!--            <totalSizeCap>10MB</totalSizeCap>-->
+<!--        </rollingPolicy>-->
+<!--        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">-->
+<!--            &lt;!&ndash;格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度，%logger:显示类名 %msg：日志消息，%n是换行符&ndash;&gt;-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        &lt;!&ndash;日志文件最大的大小&ndash;&gt;-->
+<!--    </appender>-->
+
+    <appender name="OPENAPI" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logDir}/openapi.log</file>-->
+        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${logDir}/openapi%i.log</fileNamePattern>
+            <minIndex>0</minIndex>
+            <maxIndex>20</maxIndex>
         </rollingPolicy>
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度，%logger:显示类名 %msg：日志消息，%n是换行符-->
+        <!-- 日志文档输出格式 -->
+        <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>
+            <charset>UTF-8</charset>
         </encoder>
-        <!--日志文件最大的大小-->
+        <!-- 日志文件最大的大小 -->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>100MB</MaxFileSize>
+        </triggeringPolicy>
     </appender>
+
+    <appender name="AGENT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logDir}/agent.log</file>-->
+        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <!-- 每天日志归档路径以及格式 -->
+            <fileNamePattern>${logDir}/agent_%i.log</fileNamePattern>
+            <minIndex>0</minIndex>
+            <maxIndex>20</maxIndex>
+        </rollingPolicy>
+        <!-- 日志文档输出格式 -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!-- 日志文件最大的大小 -->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>100MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+<!--    <logger name="cn.com.infosec.ucypher" additivity="false">-->
+<!--        <appender-ref ref="OPENAPI"/>-->
+<!--    </logger>-->
+
 
     <!--appender04 根据时间滚动策略的日志输出，Info及以上级别输出 -->
 <!--    <appender name="RollingFileInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
@@ -79,11 +135,14 @@
     <!--        <appender-ref ref="SYSLOG" />-->
     <!--    </logger>-->
 
-    <root level="warn">
+    <root level="debug">
 <!--                <appender-ref ref="RFILE"/>-->
+        <appender-ref ref="CONSOLE" />
+<!--        <appender-ref ref="OPENAPI" />-->
 <!--        <appender-ref ref="RollingFileError" />-->
 <!--        <appender-ref ref="RollingFileInfo" />-->
-        <appender-ref ref="SYSLOG" />
+<!--        <appender-ref ref="SYSLOG" />-->
+<!--        <appender-ref ref="AGENT" />-->
     </root>
 
 </configuration>

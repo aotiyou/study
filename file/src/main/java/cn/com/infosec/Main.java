@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,9 +28,9 @@ public class Main {
     }
 
     @Test
-    public void test() {
-
-
+    public void test() throws IOException {
+        Path tempFile = Files.createTempFile("log-catch-", ".tmp");
+        System.out.println("tempFile = " + tempFile);
     }
 
 }

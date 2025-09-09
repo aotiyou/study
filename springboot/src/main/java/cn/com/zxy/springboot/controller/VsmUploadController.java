@@ -17,7 +17,7 @@ import java.io.IOException;
  */
 @Slf4j
 @RestController
-public class UploadController {
+public class VsmUploadController {
 
     @PostMapping("upload")
     public ResponseEntity upload(@RequestPart("file") MultipartFile file, @RequestParam("requestId") String requestId,
@@ -37,7 +37,7 @@ public class UploadController {
             return ResponseEntity.ok("Error saving file");
         }
 
-        return ResponseEntity.ok("上传成功");
+        return ResponseEntity.status(200).body("Success");
 
     }
 
