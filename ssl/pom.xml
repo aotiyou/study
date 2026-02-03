@@ -16,6 +16,60 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <bouncycastle.version>1.80</bouncycastle.version>
+        <kona.version>1.0.19</kona.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tencent.kona</groupId>
+            <artifactId>kona-ssl</artifactId>
+            <version>1.0.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tencent.kona</groupId>
+            <artifactId>kona-provider</artifactId>
+            <version>1.0.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tencent.kona</groupId>
+            <artifactId>kona-pkix</artifactId>
+            <version>1.0.19</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.tencent.kona</groupId>
+            <artifactId>kona-crypto</artifactId>
+            <version>1.0.19</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+        <!-- Bouncy Castle核心库 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>${bouncycastle.version}</version>
+        </dependency>
+        <!-- Bouncy Castle后量子密码库（包含Falcon） -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcpkix-jdk18on</artifactId>
+            <version>${bouncycastle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
