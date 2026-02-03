@@ -26,6 +26,7 @@
         <module>bouncycastle</module>
         <module>ssl</module>
         <module>security_vulnerability</module>
+        <module>pool</module>
         <module>SKImportTool</module>
         <module>socket</module>
         <module>hsm</module>
