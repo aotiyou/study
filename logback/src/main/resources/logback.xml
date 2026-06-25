@@ -13,14 +13,20 @@
         </encoder>
     </appender>
 
-<!--    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">-->
-<!--        <syslogHost>10.4.150.205</syslogHost>-->
-<!--        <facility>LOCAL1</facility>-->
+    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>127.0.0.1</syslogHost>
+        <facility>LOCAL1</facility>
 <!--        <suffixPattern>%msg</suffixPattern>-->
+        <!-- 消息格式 -->
+        <encoder>
+            <pattern>
+                &lt;%level&gt;1 %date{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %host %logger %thread - - %msg%n
+            </pattern>
+        </encoder>
 <!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
 <!--            <level>error</level>-->
 <!--        </filter>-->
-<!--    </appender>-->
+    </appender>
 
     <!--appender03 根据大小和时间策略的滚动日志输出，Error及以上级别输出 -->
 <!--    <appender name="RollingFileError" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
@@ -46,45 +52,45 @@
 <!--        &lt;!&ndash;日志文件最大的大小&ndash;&gt;-->
 <!--    </appender>-->
 
-    <appender name="OPENAPI" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${logDir}/openapi.log</file>-->
-        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <!-- 每天日志归档路径以及格式 -->
-            <fileNamePattern>${logDir}/openapi%i.log</fileNamePattern>
-            <minIndex>0</minIndex>
-            <maxIndex>20</maxIndex>
-        </rollingPolicy>
-        <!-- 日志文档输出格式 -->
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-        <!-- 日志文件最大的大小 -->
-        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-            <MaxFileSize>100MB</MaxFileSize>
-        </triggeringPolicy>
-    </appender>
+<!--    <appender name="OPENAPI" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <file>${logDir}/openapi.log</file>&ndash;&gt;-->
+<!--        &lt;!&ndash; 日志记录器的滚动策略，按日期，按大小记录 &ndash;&gt;-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">-->
+<!--            &lt;!&ndash; 每天日志归档路径以及格式 &ndash;&gt;-->
+<!--            <fileNamePattern>${logDir}/openapi%i.log</fileNamePattern>-->
+<!--            <minIndex>0</minIndex>-->
+<!--            <maxIndex>20</maxIndex>-->
+<!--        </rollingPolicy>-->
+<!--        &lt;!&ndash; 日志文档输出格式 &ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>-->
+<!--            <charset>UTF-8</charset>-->
+<!--        </encoder>-->
+<!--        &lt;!&ndash; 日志文件最大的大小 &ndash;&gt;-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <MaxFileSize>100MB</MaxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--    </appender>-->
 
-    <appender name="AGENT" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${logDir}/agent.log</file>-->
-        <!-- 日志记录器的滚动策略，按日期，按大小记录 -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <!-- 每天日志归档路径以及格式 -->
-            <fileNamePattern>${logDir}/agent_%i.log</fileNamePattern>
-            <minIndex>0</minIndex>
-            <maxIndex>20</maxIndex>
-        </rollingPolicy>
-        <!-- 日志文档输出格式 -->
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-        <!-- 日志文件最大的大小 -->
-        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-            <MaxFileSize>100MB</MaxFileSize>
-        </triggeringPolicy>
-    </appender>
+<!--    <appender name="AGENT" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <file>${logDir}/agent.log</file>&ndash;&gt;-->
+<!--        &lt;!&ndash; 日志记录器的滚动策略，按日期，按大小记录 &ndash;&gt;-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">-->
+<!--            &lt;!&ndash; 每天日志归档路径以及格式 &ndash;&gt;-->
+<!--            <fileNamePattern>${logDir}/agent_%i.log</fileNamePattern>-->
+<!--            <minIndex>0</minIndex>-->
+<!--            <maxIndex>20</maxIndex>-->
+<!--        </rollingPolicy>-->
+<!--        &lt;!&ndash; 日志文档输出格式 &ndash;&gt;-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} %msg%n</pattern>-->
+<!--            <charset>UTF-8</charset>-->
+<!--        </encoder>-->
+<!--        &lt;!&ndash; 日志文件最大的大小 &ndash;&gt;-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <MaxFileSize>100MB</MaxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--    </appender>-->
 
 <!--    <logger name="cn.com.infosec.ucypher" additivity="false">-->
 <!--        <appender-ref ref="OPENAPI"/>-->
@@ -131,9 +137,9 @@
 <!--        </triggeringPolicy>-->
 <!--    </appender>-->
 
-    <!--    <logger name="org.example" level="INFO" additivity="true">-->
-    <!--        <appender-ref ref="SYSLOG" />-->
-    <!--    </logger>-->
+        <logger name="org.example" level="INFO" additivity="true">
+            <appender-ref ref="SYSLOG" />
+        </logger>
 
     <root level="debug">
 <!--                <appender-ref ref="RFILE"/>-->
@@ -141,7 +147,7 @@
 <!--        <appender-ref ref="OPENAPI" />-->
 <!--        <appender-ref ref="RollingFileError" />-->
 <!--        <appender-ref ref="RollingFileInfo" />-->
-<!--        <appender-ref ref="SYSLOG" />-->
+        <appender-ref ref="SYSLOG" />
 <!--        <appender-ref ref="AGENT" />-->
     </root>
 

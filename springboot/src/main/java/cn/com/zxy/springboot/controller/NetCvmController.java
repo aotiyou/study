@@ -1,7 +1,9 @@
 package cn.com.zxy.springboot.controller;
 
+import cn.com.zxy.springboot.dto.LicenceDTO;
 import cn.com.zxy.springboot.dto.TaskDTO;
 import cn.com.zxy.springboot.dto.TokenDTO;
+import cn.com.zxy.springboot.vo.CommonResult;
 import cn.com.zxy.springboot.vo.TokenVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,23 +23,44 @@ public class NetCvmController {
 
 
     @GetMapping("/checkapi/gettoken")
-    public TokenVO hello() {
-        return TokenVO.builder()
-                .status("200").msg("成功").token(UUID.randomUUID().toString()).build();
+    public CommonResult hello() {
+        // return TokenVO.builder()
+        //         .status("200").msg("成功").token(UUID.randomUUID().toString()).build();
+        return CommonResult.success(UUID.randomUUID().toString());
     }
 
 
     @PostMapping("/checkapi/gettoken")
-    public TokenVO getToken(@RequestBody TokenDTO dto) {
+    public CommonResult getToken(@RequestBody TokenDTO dto) {
         log.info("Received getToken request: {}", dto);
-        return TokenVO.builder()
-                .status("200").msg("成功").token(UUID.randomUUID().toString()).build();
+        // return TokenVO.builder()
+        //         .status("200").msg("成功").token(UUID.randomUUID().toString()).build();
+        return CommonResult.success(UUID.randomUUID().toString());
     }
 
     @PostMapping("/checkapi/checktask/datareceive")
     public String dataReceive(@RequestBody TaskDTO dto) {
         log.info("Received dataReceive request: {}", dto);
         return "success";
+    }
+
+    @PostMapping("/outApi/token/getToken")
+    public CommonResult<TokenVO> getToken_outApi(@RequestBody TokenDTO dto) {
+        log.info("Received getToken request: {}", dto);
+        return CommonResult.success(TokenVO.builder().token(UUID.randomUUID().toString()).build());
+        // return CommonResult.failure();
+    }
+
+    @PostMapping("/outApi/push/pushLicenseInfo")
+    public CommonResult<TokenVO> pushLicenseInfo_outApi(@RequestBody LicenceDTO dto) {
+        log.info("Received licence request: {}", dto);
+        return CommonResult.success();
+    }
+
+    @PostMapping("/outApi/push/pushKeyInfo")
+    public CommonResult<TokenVO> pushKeyInfo_outApi(@RequestBody LicenceDTO dto) {
+        log.info("Received key request: {}", dto);
+        return CommonResult.success();
     }
 
 }

@@ -1,8 +1,5 @@
 package cn.com.infosec;
 
-import cn.com.infosec.nethsm.crypto.client.CryptoClient;
-import cn.com.infosec.ucypher.agent.util.CipherUtil;
-import cn.com.infosec.ucypher.agent.util.DataUtil;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -98,40 +95,40 @@ public class Main {
 //    }
 
 
-    @Test
-    public void testPrimaryKeyHashSM2() throws Exception {
-        byte[] hash = CipherUtil.digest("Hello World".getBytes(), "SM3");
-        ByteBuffer signature = ByteBuffer.allocate(64);
-
-        CryptoClient client = new CryptoClient("10.210.20.18", "default_user", path);
-        client.SDFPrimaryKeySignHashSM2(hash, signature);
-        System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
-        client.SDFPrimaryKeyVerifyHashSM2(hash, DataUtil.getDataInByteBuffer(signature));
-        System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
-    }
-
-    @Test
-    public void testPrimaryKeyDataSM2() throws Exception {
-        byte[] plainData = "Hello, World".getBytes(StandardCharsets.UTF_8);
-        ByteBuffer signature = ByteBuffer.allocate(64);
-
-        CryptoClient client = new CryptoClient("10.210.20.18", "default_user", path);
-        client.SDFPrimaryKeySignDataSM2(plainData, signature);
-        System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
-        client.SDFPrimaryKeyVerifyDataSM2(plainData, DataUtil.getDataInByteBuffer(signature));
-        System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
-    }
-
-    @Test
-    public void testPrimaryKeyCipherSM2() throws Exception {
-        byte[] data = "Hello, World".getBytes(StandardCharsets.UTF_8);
-
-        CryptoClient client = new CryptoClient("10.210.20.18", "default_user", path);
-        byte[] encData = client.SDFPrimaryKeyEncryptSM2(data);
-        System.out.println(HexFormat.of().formatHex(encData));
-        byte[] plainData = client.SDFPrimaryKeyDecryptSM2(encData);
-        System.out.println(new String(plainData));
-    }
+    // @Test
+    // public void testPrimaryKeyHashSM2() throws Exception {
+    //     byte[] hash = CipherUtil.digest("Hello World".getBytes(), "SM3");
+    //     ByteBuffer signature = ByteBuffer.allocate(64);
+    //
+    //     CryptoClient client = new CryptoClient("10.210.20.18", "default_user", path);
+    //     client.SDFPrimaryKeySignHashSM2(hash, signature);
+    //     System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
+    //     client.SDFPrimaryKeyVerifyHashSM2(hash, DataUtil.getDataInByteBuffer(signature));
+    //     System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
+    // }
+    //
+    // @Test
+    // public void testPrimaryKeyDataSM2() throws Exception {
+    //     byte[] plainData = "Hello, World".getBytes(StandardCharsets.UTF_8);
+    //     ByteBuffer signature = ByteBuffer.allocate(64);
+    //
+    //     CryptoClient client = new CryptoClient("10.210.20.18", "default_user", path);
+    //     client.SDFPrimaryKeySignDataSM2(plainData, signature);
+    //     System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
+    //     client.SDFPrimaryKeyVerifyDataSM2(plainData, DataUtil.getDataInByteBuffer(signature));
+    //     System.out.println(HexFormat.of().formatHex(DataUtil.getDataInByteBuffer(signature)));
+    // }
+    //
+    // @Test
+    // public void testPrimaryKeyCipherSM2() throws Exception {
+    //     byte[] data = "Hello, World".getBytes(StandardCharsets.UTF_8);
+    //
+    //     CryptoClient client = new CryptoClient("10.210.20.18", "default_user", path);
+    //     byte[] encData = client.SDFPrimaryKeyEncryptSM2(data);
+    //     System.out.println(HexFormat.of().formatHex(encData));
+    //     byte[] plainData = client.SDFPrimaryKeyDecryptSM2(encData);
+    //     System.out.println(new String(plainData));
+    // }
 
 //    @Test
 //    public void testIoInfo() throws Exception {

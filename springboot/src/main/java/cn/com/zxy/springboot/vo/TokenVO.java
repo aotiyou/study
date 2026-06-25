@@ -11,8 +11,8 @@ import lombok.Data;
 @Data
 public class TokenVO {
 
-    private String status = "200";
-    private String msg = "成功";
+    // private String status = "200";
+    // private String msg = "成功";
     private String token;
 
 }
